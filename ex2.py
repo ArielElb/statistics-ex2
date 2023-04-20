@@ -36,7 +36,7 @@ feb_min_prices = sample_df[sample_df["Date"].dt.month == 2]["Minimum"]
 if len(jan_min_prices) == len(feb_min_prices):
     jan_feb_corr = jan_min_prices.corr(feb_min_prices)
 else:
-    jan_feb_corr = np.nan
+    jan_feb_corr = "correlation cannot be calculated because the number of observations in the two samples is different"
 
 # Calculate the weighted variance of the maximum daily prices of years 2013 and 2014
 # where the weight of each year is the relative number of days provided in the dataset for that year
@@ -59,13 +59,12 @@ weighted_mean = np.average(max_prices, weights=weights, axis=None)
 # Calculate the weighted variance of the maximum daily prices for both years
 weighted_var = np.average((max_prices - weighted_mean) ** 2, weights=weights, axis=None)
 
-# Print the results
-print("Weighted variance of the maximum daily prices for years 2013 and 2014:", weighted_var)
 
 
 # Print the results
 print("Population STD:", pop_std)
 print("Sample STD:", sample_std)
 print("Covariance between minimum and maximum daily prices for the sample:", covariance)
+print("Pearson correlation coefficient between minimum and maximum daily prices for the sample:", pearson_corr)
 print("Pearson correlation coefficient between minimum daily prices for January and February of the sample:", jan_feb_corr)
 print("Weighted variance of the maximum daily prices for years 2013 and 2014:", weighted_var)
