@@ -21,9 +21,9 @@ This code performs the following statistical analyses on the tomato prices datas
 - Calculates the weighted variance of the maximum daily prices for years 2013 and 2014, where the weight of each year is the relative number of days provided in the dataset for that year
 
 ## Results:
-1. Population STD: 16.96395648120897
-2. Sample STD: 15.624328786411915
-3. Covariance between minimum and maximum daily prices for the sample: 242.0955063455063
+1. Population STD: 16.96395648120897 and Sample STD: 15.624328786411915
+2. Covariance between minimum and maximum daily prices for the sample: 242.0955063455063
+3. Pearson correlation coefficient between minimum and maximum daily prices for the sample: 0.9864668783905615
 4. Pearson correlation coefficient between minimum daily prices for January and February of the sample: correlation cannot be calculated because the number of observations in the two samples is different
 5. Weighted variance of the maximum daily prices for years 2013 and 2014: 174.63592054653884
 
